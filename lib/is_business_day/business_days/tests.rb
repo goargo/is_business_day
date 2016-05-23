@@ -5,7 +5,7 @@ module IsBusinessDay
 
       included do
         def is_a_business_day?
-          (self.monday? || self.tuesday? || self.wednesday? || self.thursday? || self.friday?) && self.is_not_a_holiday?
+          self.monday? || self.tuesday? || self.wednesday? || self.thursday? || self.friday?
         end
 
         def is_not_a_business_day?
